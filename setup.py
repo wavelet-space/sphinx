@@ -6,7 +6,7 @@ readme_path = Path(__file__).resolve().parent / "README.md"
 
 setup(
     name = 'wavelet-sphinx-theme',
-    version = "0.2.0",
+    version = "0.3.0",
     license = 'MIT',
     author = 'Wavelet',
     author_email = 'contact@wavelet.space',
@@ -20,7 +20,15 @@ setup(
             'wavelet-sphinx-theme = wavelet.sphinx',
         ]
     },
-    package_data = {'': ['theme.conf','*.html','static/css/*.css','static/css/fonts/*.*','static/js/*.js',]},
+    package_data = {
+        '': [
+            'theme.conf',
+            '*.html',
+            'static/*.js',
+            'static/*.css',
+            'static/fonts/*.*',
+        ]
+    },
     install_requires = [
         'sphinx_rtd_theme >=1.0.0',
         'sphinx-copybutton'
