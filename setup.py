@@ -20,6 +20,7 @@ setup(
             'wavelet-sphinx-theme = wavelet.sphinx',
         ]
     },
+    package_data = {'': ['theme.conf','*.html','static/css/*.css','static/css/fonts/*.*','static/js/*.js',]},
     install_requires = [
         'sphinx_rtd_theme >=1.0.0',
         'sphinx-copybutton'
