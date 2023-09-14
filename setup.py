@@ -10,7 +10,7 @@ setup(
     license = 'MIT',
     author = 'Wavelet',
     author_email = 'contact@wavelet.space',
-    description = 'Wavelet sphinx theme',
+    description = 'Wavelet Sphinx Theme',
     long_description = readme_path.read_text(encoding = 'utf-8'),
     packages = find_namespace_packages(where="src"),
     package_dir = {"": "src"},
@@ -30,13 +30,12 @@ setup(
         ]
     },
     install_requires = [
-        'sphinx_rtd_theme >=1.0.0',
         'sphinx-copybutton'
     ],
     classifiers = [
         'Framework :: Sphinx',
         'Framework :: Sphinx :: Theme',
-        'Development Status :: 5 - Production/Stable',
+        'Development Status :: 3 - Alpha',
         'License :: OSI Approved :: MIT License',
         'Environment :: Console',
         'Environment :: Web Environment',
