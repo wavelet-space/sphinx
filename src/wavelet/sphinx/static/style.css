@@ -1,16 +1,84 @@
-/* body {
-    background-color: rgb(9, 16, 112);
-} */
+*, *:before, *:after {
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    width: 100%;
+    height: 100%;
+  }
 
-.wy-side-nav-search {
-    background-color: brown;
-}
+  body {
+    margin: 1rem;
+    font-size: 1em;
+    font-family: "Arial", "sans-serif";
+    background-color: #fff;
+    color: rgb(37, 37, 37);
+  }
+  
+  h1, p {
+    margin: 0 0 1rem 0;
+  }
+	
+   h1 { font-size: 2rem!important; }
+  
+  .wrapper {
+    max-width: 1020px;
+    margin: 0 1rem;
+    display: grid;
+    grid-gap: 1rem;
+  }
 
+  footer {
+    border-top: 1px solid black;
+  } 
 
-.document{
-    border: 1px solid red;
-}
+  header {
+    border-bottom: 1px solid black;
+  } 
+  
+  @media screen and (min-width: 500px) {
+  
+    .sidebar {
+      float: left;
+      width: 19.1489%;
+    }
+  
+    .content {
+      float: right;
+      width: 79.7872%;
+    }
+  
+    .wrapper {
+      margin: 0 auto;
+      grid-template-columns: 1fr 3fr;
+    }
+    
+    .header, .footer {
+      grid-column: 1 / -1;
+      clear: both;
+    }  
+  }
+  
+  .wrapper > * {
+    background-color: rgb(255, 255, 255);
+    color: rgb(17, 17, 17);
+    padding: 1rem;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
 
-.footer {
-    background-color: blueviolet;
+  .sidebar {
+    background-color: #fff;
+  }
+  
+  /* We need to set the widths used on floated items back to auto, and remove the bottom margin as when we have grid we have gaps. */
+  @supports (display: grid) {
+    .wrapper > * {
+      width: auto;
+      margin: 0;
+    }
+  }
+
+.headerlink {
+   display: none;
 }

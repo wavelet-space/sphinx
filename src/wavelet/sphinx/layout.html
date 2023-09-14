@@ -1,10 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    {%- block css %}
+    <link href="{{ pathto('_static/style.css', 1) }}" rel="stylesheet" />
+    {%- endblock %}
   </head>
-  <body class="wvelet-template__body">
-    <div class="app-pane">
-      Hello World
+  <body class="wavelet-template__body">
+    <div class="wrapper">
+      {% include "header.html" %}
+      {%- block sidebar  %}
+ 
+		 {%- include "sidebar.html" %}
+      {% endblock %}
+
+      <main class="content">{% block body %} {% endblock %}</main>
+      {% include "footer.html" %}
     </div>
   </body>
 </html>
